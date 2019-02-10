@@ -1,0 +1,16 @@
+{
+  "name": "my-blog",
+  "version": "0.1.0",
+  "description": "My Blog",
+  "private": true,
+  "scripts": {
+    "start": "concurrently -p '[{name}]' -n 'API,APP' -c 'bgMagenta.bold,bgGreen.bold' 'npm run start:api' 'npm run start:app'",
+    "start:api": "cd api && npm start",
+    "start:app": "cd app && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "lerna": "^3.4.3",
+    "ndb": "^1.0.33"
+  }
+}
